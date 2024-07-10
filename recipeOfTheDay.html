@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" href="./img/kochwelt-logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/kochwelt-logo.png">
+    <link rel="stylesheet" href="Style/style.css">
+    <title>Kochwelt</title>
+    <script src="JS/script.js"></script>
+</head>
+
+<body onload="toggleRecipeOfTheDay()">
+    <div class="body">
+        <header>
+            <div class="logo-position">
+                <a href="./index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-position">
+                <menu class="desktop-menu" id="desktopMenu">
+                    <a href="./index.html" onclick="toggleStart()" id="start">Start</a>
+                    <a href="./recipeOfTheDay.html" onclick="toggleRecipeOfTheDay()" id="recipeOfTheDay">Rezept des Tages</a>
+                    <a href="./contact.html" onclick="toggleContact()" id="contact">Kontakt</a>
+                    <a href="./impressum.html" onclick="toggleImpressum()" id="impressum">Impressum</a>
+                </menu>
+                <div class="burger-container">
+                    <img class="burger-icon hide-desktop" onclick="showMenu()" src="./icons/burger-menu.png" alt="menu">
+                </div>
+                <menu id="menu" class="overlay-menu">
+                    <div class="responsive-menu">
+                        <div class="close-container">
+                            <img onclick="closeMenu()" class="close-button" src="./icons/exitmenu.png" alt="">
+                        </div>
+                        <a href="./index.html" onclick="toggleStart()">Start</a>
+                        <a href="./recipeOfTheDay.html" onclick="toggleRecipeOfTheDay()">Rezept des Tages</a>
+                        <a href="./contact.html" onclick="toggleContact()">Kontakt</a>
+                        <a href="./impressum.html" onclick="toggleImpressum()">Impressum</a>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <div class="recipe-container" id="recipeContainer">
+                <h1>Spargel-Pfannkuchen mit Sauce Hollandaise</h1>
+                <img class="recipe-image" src="./img/spargel-pfannenkuchen.JPEG" alt="Griechischer">
+                <div class="icon-container">
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>15 Min</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/brain-solid.svg" alt="brain">
+                        <p>simpel</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/calendar-alt-regular.svg" alt="calendar">
+                        <p>04.05.2024</p>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <p>Zutaten für:</p>
+                    <div class="input-direction">
+                        <input class="portion-input" id="portionInput" onkeydown="if(event.key==='.'|| event.key===','){event.preventDefault();}" type="number" name="Portions" step="1" value="4" min="1" max="1000"
+                            required>
+                        <div onclick="calculate()" class="button">Portionen</div>
+                    </div>
+                </div>
+                <div id="tableContainer">
+                    <!-- Tabelle per JavaScript geladen -->
+                </div>
+                <h2>Zubereitung</h2>
+                <div class="icon-container-bottom">
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>Arbeitszeit ca. 15 Minuten</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>Gesamtzeit ca. 15 Minuten</p>
+                    </div>
+                </div>
+                <div class="preparation">
+                    <p>Für den Pfannkuchenteig zuerst Mehl, Milch, Eier und Salz in einer Schüssel gut mischen. Dann
+                        alles mit einem Schneebesen oder mit einen Handrührgerät zu einen glatten Teig rühren. Den
+                        Teig
+                        beiseitestellen, damit er quellen kann.</p>
+                    <p>In der Zeit den Spargel schälen und in Wasser mit Zitronensaft weich kochen, nach Geschmack.
+                    </p>
+                    <p>Zwischendurch die Pfannkuchen portionsweise in einer beschichteten Pfanne backen mit etwas Öl
+                        braten. Ich hatte eine mit 26 cm Ø genommen.</p>
+                    <p>Für die Sauce einen Topf mit etwas Wasser zum Kochen bringen, worauf eine Schüssel passt. In
+                        einer passenden Schüssel das Eigelb und den Wein vermischen und mit einem Schneebesen
+                        schaumig
+                        schlagen.</p>
+                    <p>Wenn das Wasser dampft, die Schüssel über den Dampf stellen und die Eimasse schlagen, bis sie
+                        cremig wird. Dann langsam kleine Butterstücke unterschlagen. Aber Vorsicht: Nicht, dass die
+                        Masse nicht zu heiß wird und gerinnt! Zur Not einen Eiswürfel unterschlagen und die Sauce
+                        vom
+                        Herd nehmen. Wenn die Butter verarbeitet ist, die Sauce mit Salz und Pfeffer aus der Mühle
+                        abschmecken.</p>
+                    <p>Jetzt einen Pfannkuchen auf den Teller legen, eine Hälfte mit Spargel belegen und mit der
+                        Sauce
+                        übergießen. Jetzt die andere Hälfte des Pfannkuchens über den Spargel klappen, fertig.</p>
+                    <p>Dazu kann man einen gemischten Salat reichen.</p>
+                    <p>Bei 2 Portionen hat eine Portion 975 Kcal.</p>
+                </div>
+                <div>
+                    <h2>Rezept erstellt von</h2>
+                    <div class="profile-container">
+                        <img src="./img/profile-mike.png" alt="Profile">
+                        <h3>Mike</h3>
+                    </div>
+                </div>
+                <div class="footer-space">
+                    <!-- Space zum Footer -->
+                </div>
+            </div>
+        </main>
+        <footer>
+            <!-- Footer bleibt leer -->
+        </footer>
+    </div>
+</body>
+
+</html>

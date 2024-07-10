@@ -1,0 +1,265 @@
+body {
+    margin:0;
+    font-family: "Raleway", sans-serif;
+    color: rgb(64, 59, 59);
+}
+
+.kk_intro {
+    display: flex;
+    flex-direction: column;
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+}
+
+.kk_intro h1 {
+    font-weight:500;
+}
+.kk_intro img {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.svg-container{
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+
+}
+
+.button_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    height: 25px;
+    gap: 5px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seperator2 {
+    margin-top: 35px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgb(238, 237, 238);
+    height: 2px;
+    filter: drop-shadow(3px 3px 3px rgb(242, 240, 242)); 
+}
+
+.button3 {
+    padding: 10px 30px;
+    background-color: rgb(55, 126, 34);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.tableContainer {
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+}
+
+.kk_rezept {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 35px;
+    gap: 6px;
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+}
+
+.kk_rezept p {
+    margin: 0;
+    height: 16px;
+}
+
+.kk_rezept input {
+    width: 125px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-radius: 0;
+    padding: 1px 0px;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.input_content {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.anleitung {
+    margin-top: 35px;
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+}
+
+.anleitung p {
+    margin-top: 35px;
+}
+.button_anleitung {
+    display: flex;
+    gap: 30px;
+}
+
+.profile_section{
+    padding-bottom: 50px;
+    padding-left: calc((100% - 1600px) / 2);
+    padding-right: calc((100% - 1600px) / 2);
+}
+
+.profile_content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        padding-bottom: 50px;
+} 
+    
+.profile_content img {
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width:1600px){
+        .kk_intro {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .svg-container{
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .kk_rezept{
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .tableContainer {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .anleitung {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+        .profile_section {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+
+    }
+
+@media (max-width:850px){
+    .kk_intro {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .svg-container {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .seperator2 {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .tableContainer {
+        padding-left: 50px;
+        padding-right: 50px;
+}
+     .kk_rezept {
+        padding-left: 50px;
+        padding-right: 50px;
+     }
+     .anleitung {
+        padding-left: 50px;
+        padding-right: 50px;
+     }
+
+     .profile_section{
+        padding-left: 50px;
+        padding-right: 50px;
+     }
+}
+
+@media (max-width:430px){
+
+    .kk_intro {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .svg-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: column;
+    }
+
+    .seperator2 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .tableContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+     .kk_rezept {
+        padding-left:10px;
+        padding-right: 10px;
+        flex-direction: column;
+
+     }
+
+     .anleitung {
+        padding-left: 10px;
+        padding-right: 10px;
+     }
+
+     .svg-container{
+     gap: 5px;
+     justify-content: center;
+     }
+
+     .profile_section{
+        padding-left: 10px;
+        padding-right: 10px;
+     }
+     .button_anleitung{
+        flex-direction: column;
+        gap: 5px;
+     }
+    }
+    @media (min-width:1600px){
+        .seperator2{
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+ 

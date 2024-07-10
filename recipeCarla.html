@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="apple-touch-icon" href="./img/kochwelt-logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/kochwelt-logo.png">
+    <link rel="stylesheet" href="./Style/style.css">
+    <title>Kochwelt</title>
+    <script src="./JS/scriptCarla.js"></script>
+    <script src="./JS/script.js"></script>
+
+</head>
+
+<body onload="toggleRecipeCarla()">
+    <div class="body">
+        <header>
+            <div class="logo-position">
+                <a href="./index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-position">
+                <menu class="desktop-menu" id="desktopMenu">
+                    <a class="menu-underline" href="./index.html" onclick="toggleStart()" id="start">Start</a>
+                    <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()" id="recipeOfTheDay">Rezept des Tages</a>
+                    <a class="menu-underline" href="./contact.html" onclick="toggleContact()" id="contact">Kontakt</a>
+                    <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()" id="impressum">Impressum</a>
+                </menu>
+                <div class="burger-container">
+                    <img class="burger-icon hide-desktop" onclick="showMenu()" src="./icons/burger-menu.png" alt="menu">
+                </div>
+                <menu id="menu" class="overlay-menu">
+                    <div class="responsive-menu">
+                        <div class="close-container">
+                            <img onclick="closeMenu()" class="close-button" src="./icons/exitmenu.png" alt="">
+                        </div>
+                        <a class="menu-underline" href="./index.html" onclick="toggleStart()">Start</a>
+                        <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()">Rezept des Tages</a>
+                        <a class="menu-underline" href="./contact.html" onclick="toggleContact()">Kontakt</a>
+                        <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()">Impressum</a>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <div class="recipe-container" id="recipeContainer">
+                <h1>Rhabarberkuchen mit Streusel</h1>
+                <img class="recipe-image" src="img/rhubarb-cake.jpg" alt="Rhabarberkuchen">
+                <div class="icon-container">
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>1 Std 5 Min</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/brain-solid.svg" alt="brain">
+                        <p>simpel</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/calendar-alt-regular.svg" alt="calendar">
+                        <p>07.05.2024</p>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <p>Zutaten für:</p>
+                    <div class="input-direction">
+                        <input id="portionInput"
+                            onkeydown="if(event.key==='.'|| event.key===','){event.preventDefault();}" type="number"
+                            name="Portions" step="1" value="4" min="1" max="1000" required>
+                        <div onclick="calculateCarla()" class="button-recipe">Portionen</div>
+                    </div>
+                </div>
+                <div id="tableContainer">
+                    <!-- Tabelle per JavaScript geladen -->
+                </div>
+                <h2>Zubereitung</h2>
+                <div class="icon-container-bottom">
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>Arbeitszeit ca. 20 Minuten</p>
+                    </div>
+                    <div class="icon-box">
+                        <img src="./icons/clock-regular.svg" alt="clock">
+                        <p>Gesamtzeit ca. 1 Std 5 Minuten</p>
+                    </div>
+                </div>
+
+                <div class="preparation">
+                    <p>Zuerst heizt Du den Ofen auf 180 Grad Ober- / Unterhitze auf und legst den Boden Deiner
+                        Springform
+                        mit Backpapier aus. Die Ränder ganz leicht mit Butter einfetten.
+                    </p>
+                    <p>Für 8 Portionen reicht eine Springform mit 24 cm Durchmesser.</p>
+                    <p>FÜR DEN STREUSEL-BODEN UND DAS TOPPING</p>
+                    <p>1. Für den Streusel-Boden und das Streusel-Topping vermengst Du mit dem Knethaken der
+                        Küchenmaschine,
+                        dem Handmixer oder den Händen 300 g Mehl, 150 g kalte Butter und 150 g Zucker, so lange bis sich
+                        die
+                        Zutaten gut miteinander verbunden haben. Je nach Buttersorte ist der Teig kürmelig bis
+                        "sandartig".
+                    </p>
+                    <p>2. Danach knetest Du mit der Hand die Masse noch zu Streuseln fest und stellst sie beiseite in
+                        den
+                        Kühlschrank.</p>
+                    <p>FÜR DEN BELAG</p>
+                    <p>1. Jetzt 800 g Rhabarber gründlich waschen, die Blätter und Stielenden großzügig abschneiden und
+                        in
+                        schräge, fingerbreite Stücke schneiden.
+                        Hinweis: Ich putze meinen Rhabarber nur wie beschrieben und schäle wirklich nur dicke, sehr
+                        faserige
+                        Stangen. Wenn man Rhabarber schält verliert er nämlich seine schöne rote Farbe. Mehr Infos dazu
+                        findest Du oben im Beitrag.</p>
+                    <p>2. 1 TL Butter in einer großen Pfanne bei mittlerer Stufe schmelzen lassen und den Rhabarber
+                        hineingeben. Mit 6 EL Zucker bestreuen und diesen darin kurz auflösen lassen.</p>
+                    <p>3. Dann gibst Du 2 EL Speisestärke dazu und lässt das Ganze auf niedriger Stufe 2 Minuten ganz
+                        leicht
+                        köcheln.</p>
+                    <p>4. In der Zeit Zweidrittel (2/3) der Streuselmenge mit einem Löffel auf dem Boden Deiner
+                        Springform
+                        verteilen und zu einem kompakten, dichten Boden festdrücken, der keine Lücken oder dünne Stellen
+                        aufweist, sonst besteht die Gefahr, dass er durchweicht.</p>
+                    <p>5. Den Rhabarber aus der Pfanne auf dem Boden verteilen und mit 1 Päckchen Vanillezucker
+                        bestreuen.
+                    </p>
+                    <p>6. Zum Schluss knetest Du mit den Händen den restliche Streuselteig (ca. 1/3) zu beliebig großen
+                        Streuseln und gibst sie als Topping oben drauf.</p>
+                    <p>7. Der Streusel Rhabarberkuchen kommt jetzt für 45 Minuten auf der mittleren Schiene in den
+                        vorgeheizten Backofen. Du kannst ihn übrigens auch lauwarm essen und es schmeckt sehr gut Sahne
+                        oder
+                        Vanille-Eis dazu.</p>
+                    <p>8. Ich wünsche Dir mit meinem Rhabarberkuchen Rezept viel Freude und einen guten Appetit!
+                </div>
+                </p>
+
+                <div>
+                    <h2>Rezept erstellt von</h2>
+                    <div class="profile-container">
+                        <img src="./img/profile-carla.jpg" alt="Profile">
+                        <h3>Carla</h3>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="footer-space">
+        <!-- Space zum Footer -->
+    </div>
+    </div>
+    </main>
+    <footer>
+        <!-- Footer bleibt leer -->
+    </footer>
+    </div>
+
+</body>
+
+</html>

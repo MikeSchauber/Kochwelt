@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'raleway';
+    src: url('./raleway/static/Raleway-Medium.ttf');
+}
+
+.impressum {
+
+    font-family: 'Raleway', sans-serif;
+    padding-left: 200px;
+    padding-right: 200px;
+
+    padding-bottom: 80px;
+}
+
+
+@media (max-width: 1050px) {
+    .impressum {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+

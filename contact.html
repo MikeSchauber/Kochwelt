@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <link rel="apple-touch-icon" href="./img/kochwelt-logo.png" />
+    <link rel="icon" type="image/x-icon" href="./img/kochwelt-logo.png" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="Style/contact.css" />
+    <link rel="stylesheet" href="Style/style.css" />
+    <script src="JS/script.js"></script>
+    <script src="JS/contact.js"></script>
+  </head>
+  <body onload="toggleContact()">
+    <header>
+      <div class="logo-position">
+        <a href="./index.html"><img src="img/logo.png" alt="Logo" /></a>
+      </div>
+      <div class="menu-position">
+        <menu class="desktop-menu" id="desktopMenu">
+          <a
+            class="menu-underline"
+            href="./index.html"
+            onclick="toggleStart()"
+            id="start"
+            >Start</a
+          >
+          <a
+            class="menu-underline"
+            href="./recipeMike.html"
+            onclick="toggleRecipeOfTheDay()"
+            id="recipeOfTheDay"
+            >Rezept des Tages</a
+          >
+          <a
+            class="menu-underline"
+            href="./contact.html"
+            onclick="toggleContact()"
+            id="contact"
+            >Kontakt</a
+          >
+          <a
+            class="menu-underline"
+            href="./impressum.html"
+            onclick="toggleImpressum()"
+            id="impressum"
+            >Impressum</a
+          >
+        </menu>
+        <div class="burger-container">
+          <img
+            class="burger-icon hide-desktop"
+            onclick="showMenu()"
+            src="./icons/burger-menu.png"
+            alt="menu"
+          />
+        </div>
+        <menu id="menu" class="overlay-menu">
+          <div class="responsive-menu">
+            <div class="close-container">
+              <img
+                onclick="closeMenu()"
+                class="close-button"
+                src="./icons/exitmenu.png"
+                alt=""
+              />
+            </div>
+            <a
+              class="menu-underline"
+              href="./index.html"
+              onclick="toggleStart()"
+              >Start</a
+            >
+            <a
+              class="menu-underline"
+              href="./recipeMike.html"
+              onclick="toggleRecipeOfTheDay()"
+              >Rezept des Tages</a
+            >
+            <a
+              class="menu-underline"
+              href="./contact.html"
+              onclick="toggleContact()"
+              >Kontakt</a
+            >
+            <a
+              class="menu-underline"
+              href="./impressum.html"
+              onclick="toggleImpressum()"
+              >Impressum</a
+            >
+          </div>
+        </menu>
+      </div>
+    </header>
+
+    <div class="contact-form">
+      <div class="contact">
+        <h1>Kontakt</h1>
+
+        <form onsubmit="sendMail(event)">
+          <div>
+            Sie haben Fragen, Wünsche, Anregungen oder Kritik? <br />
+            Wir freuen uns über jede Nachricht!
+          </div>
+
+          <div class="fillIn">
+            <label>
+              <p>Deine E-Mail:</p>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+                <p>Dein Name:</p>
+                <input name="name" required />
+              </label>
+            <label>
+              <p>Deine Nachricht:</p>
+              <textarea name="message" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      
+  </footer>
+  
+  </body>
+</html>

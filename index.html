@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="apple-touch-icon" href="./img/kochwelt-logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/kochwelt-logo.png">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="./Style/start.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="./JS/script.js"></script>
+    <script src="./JS/scriptCarlotta.js"></script>
+</head>
+
+<body onload="toggleStart(), picturechange(), contentchange()">
+    <div class="main">
+        <header >
+            <div class="logo-position">
+                <a href="./index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-position">
+                <menu class="desktop-menu" id="desktopMenu">
+                    <a class="menu-underline" href="./index.html" onclick="toggleStart()" id="start">Start</a>
+                    <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()" id="recipeOfTheDay">Rezept des Tages</a>
+                    <a class="menu-underline" href="./contact.html" onclick="toggleContact()" id="contact">Kontakt</a>
+                    <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()" id="impressum">Impressum</a>
+                </menu>
+                <div class="burger-container">
+                    <img class="burger-icon hide-desktop" onclick="showMenu()" src="./icons/burger-menu.png" alt="menu">
+                </div>
+                <menu id="menu" class="overlay-menu">
+                    <div class="responsive-menu">
+                        <div class="close-container">
+                            <img onclick="closeMenu()" class="close-button" src="./icons/exitmenu.png" alt="">
+                        </div>
+                        <a class="menu-underline" href="./index.html" onclick="toggleStart()">Start</a>
+                        <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()">Rezept des Tages</a>
+                        <a class="menu-underline" href="./contact.html" onclick="toggleContact()">Kontakt</a>
+                        <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()">Impressum</a>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <div>
+            <div class="seperator"></div>
+        </div>
+
+        <div class="rblock_section">
+            <img id="image" src="./img/spargel-pfannenkuchen.JPEG" alt="Rezept" >
+            <div id="content" class="rblock_content">
+                <h2>Spargel Pfannkuchen</h2>
+                <p>Schmackhafter Spargel kann auch zu Hause sehr einfach angerichtet werden. Mit ca. 15 min Aufwand
+                    kannst
+                    du
+                    ein wundervolles Hauptgericht zur Spargelzeit zaubern. </p>
+                <a href="./recipeMike.html" class="button">Rezept Öffnen</a>
+            </div>
+        </div>
+
+        <div class="quicklink_section">
+            <div class="quicklink_content">
+            <h2>Lust auf was neues?</h2>
+            <div class="quicklink_recipes">
+                <a onclick="toggleRecipeOfTheDay()" href="./recipeMike.html" class="recipe_list">Spargel Pfannenkuchen  
+                    <img src="./img/spargel-pfannenkuchen.JPEG" alt="">
+                </a>
+                <a onclick="toggleRecipeCarla()" href="./recipeCarla.html" class="recipe_list">Rhabarberkuchen
+                    <img src="./img/rhubarb-cake.jpg" alt="">
+                </a>
+                <a onclick="toggleRecipeCarlotta()" href="./recipeCarlotta.html" class="recipe_list">Karotten Kuchen
+                    <img src="./img/carrot-cake.jpg" alt="">
+                </a>
+            </div>
+            </div>
+        </div>
+
+        <div class="paragraph_section">
+            <h2> Beschichtet vs unbeschichtet - Was ist das beste Material für Bratpfannen? </h2>
+            <div class="paragraph_content">
+                <p>Grundsätzlich gilt: Eine unbeschichtete Edelstahlpfanne eignet sich besonders gut zum scharfen Anbraten, während eine beschichtete Edelstahlpfanne eher zum schonenden Garen von Speisen verwendet wird.
+                    Aus einer PTFE-beschichteten Pfanne werden laut Bundesinstitut für Riskobewertung keine Schadstoffe freigesetzt, wenn diese nicht zu hoch erhitzt wird. PTFE-beschichtete Pfannen sollten vorsorglich vor der ersten Nutzung ausgespült und mit Wasser ausgekocht werden. Die Pfanne niemals leer erhitzen.</p>
+                <img src="./img/pfanne.jpg" alt="beschichtet vs. unbeschichtet">
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="apple-touch-icon" href="./img/kochwelt-logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/kochwelt-logo.png">
+    <title>Karotten Kuchen</title>
+    <link rel="stylesheet" href="./Style/recipeCarlotta.css">
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="./JS/script.js"></script>
+    <script src="./JS/scriptCarlotta.js"></script>
+</head>
+
+<body onload="toggleRecipeCarlotta(), calculateCarlotta()">
+    <div class="main">
+        <header>
+            <div class="logo-position">
+                <a href="./index.html"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="menu-position">
+                <menu class="desktop-menu" id="desktopMenu">
+                    <a class="menu-underline" href="./index.html" onclick="toggleStart()" id="start">Start</a>
+                    <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()" id="recipeOfTheDay">Rezept des Tages</a>
+                    <a class="menu-underline" href="./contact.html" onclick="toggleContact()" id="contact">Kontakt</a>
+                    <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()" id="impressum">Impressum</a>
+                </menu>
+                <div class="burger-container">
+                    <img class="burger-icon hide-desktop" onclick="showMenu()" src="./icons/burger-menu.png" alt="menu">
+                </div>
+                <menu id="menu" class="overlay-menu">
+                    <div class="responsive-menu">
+                        <div class="close-container">
+                            <img onclick="closeMenu()" class="close-button" src="./icons/exitmenu.png" alt="">
+                        </div>
+                        <a class="menu-underline" href="./index.html" onclick="toggleStart()">Start</a>
+                        <a class="menu-underline" href="./recipeMike.html" onclick="toggleRecipeOfTheDay()">Rezept des Tages</a>
+                        <a class="menu-underline" href="./contact.html" onclick="toggleContact()">Kontakt</a>
+                        <a class="menu-underline" href="./impressum.html" onclick="toggleImpressum()">Impressum</a>
+                    </div>
+                </menu>
+            </div>
+        </header>
+        <main>
+            <div class="seperator"></div>
+
+            <div class="kk_intro">
+                <h1>Karrotten Kuchen</h1>
+                <img src="./img/carrot-cake.jpg" alt="Karotten Kuchen">
+            </div>
+
+            <div class="svg-container">
+                <div class="button_content">
+                    <img class="icon" src="./icons/clock-regular.svg" alt="">
+                    35 min
+                </div>
+                <div class="button_content">
+                    <img class="icon" src="./icons/brain-solid.svg" alt="">
+                    Normal
+                </div>
+                <div class="button_content">
+                    <img class="icon" src="./icons/calendar-alt-regular.svg" alt="">
+                    07.05.2024
+                </div>
+            </div>
+
+            <div class="seperator2"></div>
+
+            <div class="kk_rezept" >
+                <p>Zutaten für:</p>
+                <div class="input_content">
+                    <input style="text-align: right;" class="portion-input" id="portionInput" onkeydown="if(event.key==='.'|| event.key===','){event.preventDefault();}" type="number" name="Portions" step="1" value="4" min="1" max="1000"
+                        required >
+                    <div onclick="calculateCarlotta()" class="button3">Portionen</div>
+                </div>
+            </div>
+            <div id="tableContainer" class="tableContainer">
+                <!-- Tabelle per JavaScript geladen -->
+            </div>
+
+            <div class="seperator2"></div>
+
+            <div class="anleitung">
+                <h3> Zubereitung:</h3>
+                <div class="button_anleitung">
+                    <div class="button_content">
+                        <img class="icon" src="./icons/clock-regular.svg" alt="">
+                        Arbeitszeit ca. 35min
+                    </div>
+                    <div class="button_content">
+                        <img class="icon" src="./icons/clock-regular.svg" alt="">
+                        Backzeit ca. 40min
+                    </div>
+                </div>
+                <p>
+                    Eier, Zucker, Öl und Zimt mit dem Mixer verrühren. Die Karotten und Mandeln hinzugeben. Mehl und
+                    Backpulver mischen, ebenfalls unterrühren. Den Teig in eine gefettete 26er Springform füllen.
+                    <br><br>
+
+                    Im heißen Backofen bei 180 °C Ober-/Unterhitze ca. 40 - 50 Minuten backen. Man sollte eine
+                    Stäbchenprobe
+                    machen und die Erfahrungswerte mit dem eigenen Backofen berücksichtigen. <br><br>
+
+                    Für das Frosting Frischkäse und Zitronensaft mit dem Mixer auf niedriger Stufe glatt rühren.
+                    Puderzucker
+                    und Vanillezucker einrieseln lassen. <br> <br>
+
+                    Nach dem Backen den Kuchen abkühlen lassen. Das Frosting mit der Streichpalette rundherum auftragen.
+                </p>
+            </div>
+            <div class="profile_section">
+                <h2>Rezept erstellt von</h2>
+                <div class="profile_content">
+                    <img src="./img/profil-Carlotta.jpeg" alt="Profile">
+                    <h3>Carlotta</h3>
+                </div>
+             </div>
+        </main>
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,414 @@
+@font-face {
+    font-family: "raleway";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: "raleway";
+}
+
+.body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header {
+    height: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 1px 10px 1px #000000;
+}
+
+.logo-position {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 60px;
+    cursor: pointer;
+    transition: all 110ms ease-in-out;
+}
+
+header img:hover {
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+.menu-position {
+    display: flex;
+    align-items: flex-end;
+}
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+header a {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-weight: bolder;
+    text-decoration: none;
+    color: black;
+    padding-inline-start: 0;
+}
+
+/* Menü Animation*/
+
+.menu-underline:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: -7px;
+    left: 0;
+    border-radius: 100px;
+    background-color: green;
+}
+
+.scale:after {
+    transform: scaleX(1);
+}
+
+.color {
+    color: green;
+}
+
+.menu-underline:hover:after {
+    transform: scaleX(1);
+    color: green;
+}
+
+.menu-underline:hover {
+    color: green;
+}
+
+/* Responsive Menü */
+.overlay-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-size: cover;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100vh;
+    border-left: 1px solid black;
+    transform: translateX(321px);
+    transition: all 255ms ease-in-out;
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.responsive-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 50px;
+    gap: 25px;
+}
+
+.close-button {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.show-overlay-menu {
+    transform: translateX(0px);
+}
+
+.close-container {
+    position: relative;
+    width: 300px;
+}
+
+.close-button {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+
+/* Burger Icon und responsive Klassen */
+
+.burger-container {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.burger-icon {
+    height: 48px;
+    width: 48px;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+
+/* Main Section */
+
+
+main {
+    flex: 1;
+}
+
+.main {
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+h2 {
+    padding-top: 30px;
+}
+
+.recipe-container {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Icon Container (Zeitaufwand, Schwierigkeitsgrad...) */
+
+.icon-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: 1px solid lightgrey;
+    padding: 20px 0px;
+    font-size: 12px;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 25px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-box img {
+    height: 12px;
+    width: 12px;
+}
+
+/* Input Container */
+
+.input-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 15px;
+}
+
+.input-container p {
+    margin: 0;
+    height: 16px;
+}
+
+.input-container input {
+    width: 100px;
+    max-width: 125px;
+    height: 35px;
+    border: 1px solid lightgrey;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    text-align: right;
+}
+
+.input-direction {
+    display: flex;
+}
+
+/* Tabellen Styling */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: system-ui, sans-serif;
+    font-size: 15px;
+}
+
+table td {
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #e1e1e1;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+table span {
+    color: green;
+}
+
+/* Untere Icon boxen */
+
+.icon-container-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    font-size: 12px;
+}
+
+/* Text für Zubereitung */
+
+.preparation {
+    font-weight: 500;
+}
+
+/* Profil von wem ist das Rezept */
+
+.profile-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-container img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.footer-space {
+    height: 100px;
+}
+
+/* Allgemeine Button Klasse: */
+
+.button-recipe {
+    padding: 9px 30px;
+    width: 70px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+}
+
+/* footer */
+
+footer {
+    height: 300px;
+    width: 100%;
+    background: #403b3b;
+}
+
+@media (max-width: 1050px) {
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .hide-desktop {
+        display: block !important;
+    }
+
+    header {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .recipe-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .icon-container img {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (max-width: 430px) {
+    .overlay-menu {
+        width: 100%;
+        transform: translateX(470px);
+    }
+
+    .show-overlay-menu {
+        transform: translateX(0px);
+    }
+
+    .responsive-menu {
+        align-items: center;
+    }
+
+    .icon-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .icon-container-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .icon-box {
+        width: 100%;
+        padding: 0;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-container input {
+        border-right: 1px solid lightgrey;
+    }
+
+}
